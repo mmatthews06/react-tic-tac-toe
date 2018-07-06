@@ -1,25 +1,31 @@
 /* global beforeEach, describe, expect, jest, it */
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import GameBoard from './GameBoard';
 
-const targetXY = (clientX, clientY) => ({
-  target: {
+const targetXY = (x, y) => {
+  const dims = {
+    x: 470,
+    y: 190,
+    width: 500,
+    height: 500,
+    top: 190,
+    right: 970,
+    bottom: 690,
+    left: 470,
+  };
+  const clientX = x + dims.left;
+  const clientY = y + dims.top;
+
+  return {
     clientX,
     clientY,
-    getBoundingClientRect: () => ({
-      x: 470,
-      y: 190,
-      width: 500,
-      height: 500,
-      top: 190,
-      right: 970,
-      bottom: 690,
-      left: 470,
-    }),
-  },
-});
+    target: {
+      getBoundingClientRect: () => ({ ...dims }),
+    },
+  };
+};
 
 beforeEach(() => {
   jest.clearAllMocks();
@@ -108,7 +114,6 @@ describe('Actual SVG Lines', () => {
 
 describe('Clicks on the GameBoard', () => {
   const wrapper = shallow(<GameBoard />);
-  const mock = jest.fn();
   wrapper.instance().squareClicked = jest.fn();
 
   it('should handle top-left click', () => {
@@ -122,42 +127,42 @@ describe('Clicks on the GameBoard', () => {
   });
 
   it('should handle top-right click', () => {
-    wrapper.simulate('click', targetXY(216, 110));
+    wrapper.simulate('click', targetXY(390, 108));
     expect(wrapper.instance().squareClicked).toHaveBeenCalledWith(2);
   });
 
   it('should handle middle-left click', () => {
-    wrapper.simulate('click', targetXY(216, 110));
+    wrapper.simulate('click', targetXY(36, 253));
     expect(wrapper.instance().squareClicked).toHaveBeenCalledWith(3);
   });
 
   it('should handle middle-middle click', () => {
-    wrapper.simulate('click', targetXY(216, 110));
+    wrapper.simulate('click', targetXY(221, 258));
     expect(wrapper.instance().squareClicked).toHaveBeenCalledWith(4);
   });
 
   it('should handle middle-right click', () => {
-    wrapper.simulate('click', targetXY(216, 110));
+    wrapper.simulate('click', targetXY(382, 248));
     expect(wrapper.instance().squareClicked).toHaveBeenCalledWith(5);
   });
 
   it('should handle bottom-left click', () => {
-    wrapper.simulate('click', targetXY(216, 110));
+    wrapper.simulate('click', targetXY(85, 399));
     expect(wrapper.instance().squareClicked).toHaveBeenCalledWith(6);
   });
 
   it('should handle bottom-middle click', () => {
-    wrapper.simulate('click', targetXY(216, 110));
+    wrapper.simulate('click', targetXY(231, 421));
     expect(wrapper.instance().squareClicked).toHaveBeenCalledWith(7);
   });
 
   it('should handle bott-right click', () => {
-    wrapper.simulate('click', targetXY(216, 110));
+    wrapper.simulate('click', targetXY(408, 416));
     expect(wrapper.instance().squareClicked).toHaveBeenCalledWith(8);
   });
 });
 
 it('should match a snapshot', () => {
-  const wrapper = mount(<GameBoard />);
+  const wrapper = shallow(<GameBoard />);
   expect(wrapper).toMatchSnapshot();
 });

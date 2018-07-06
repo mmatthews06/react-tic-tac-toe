@@ -18,18 +18,36 @@ export default class GameBoard extends React.Component {
     const dim = e.getBoundingClientRect();
     const x = evt.clientX - dim.left;
     const y = evt.clientY - dim.top;
-    console.log(`X: ${x}, Y: ${y}, DIM:`, dim);
+    console.log(`X: ${x}, Y: ${y}`);
 
     const oneThirdHeight = height / 3;
     const twoThirdsHeight = oneThirdHeight * 2;
     const oneThirdWidth = width / 3;
     const twoThirdsWidth = oneThirdWidth * 2;
 
-    if (x <= oneThirdWidth && y <= oneThirdHeight) {
-      this.squareClicked(0);
+    if (y <= oneThirdHeight) {
+      if (x <= oneThirdWidth) {
+        this.squareClicked(0);
+      } else if (x <= twoThirdsWidth) {
+        this.squareClicked(1);
+      } else {
+        this.squareClicked(2);
+      }
+    } else if (y <= twoThirdsHeight) {
+      if (x <= oneThirdWidth) {
+        this.squareClicked(3);
+      } else if (x <= twoThirdsWidth) {
+        this.squareClicked(4);
+      } else {
+        this.squareClicked(5);
+      }
+    } else if (x <= oneThirdWidth) {
+      this.squareClicked(6);
+    } else if (x <= twoThirdsWidth) {
+      this.squareClicked(7);
+    } else {
+      this.squareClicked(8);
     }
-
-    this.squareClicked(8);
   }
 
   /* eslint-disable-next-line  */
