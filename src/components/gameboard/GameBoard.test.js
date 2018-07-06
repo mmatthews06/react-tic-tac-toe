@@ -1,10 +1,19 @@
-/* global expect it */
+/* global describe, expect, it */
 import React from 'react';
 import { shallow } from 'enzyme';
 
 import GameBoard from './GameBoard';
 
-it('Should Run', () => {
+describe('Calculated Lines', () => {
   const wrapper = shallow(<GameBoard />);
-  expect(wrapper.find('span').text()).toBe('Hello!');
+  const lines = wrapper.instance().calculateLines();
+
+  it('should have correct first vertical line', () => {
+    expect(lines[0]).toEqual({
+      x1: (500 / 3),
+      y1: 0,
+      x2: (500 / 3),
+      y2: 500,
+    });
+  });
 });
