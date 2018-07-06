@@ -7,12 +7,34 @@ import './GameBoard.css';
 export default class GameBoard extends React.Component {
   constructor(props) {
     super(props);
+    this.boardClicked = this.boardClicked.bind(this);
     this.squareClicked = this.squareClicked.bind(this);
     this.calculateLines = this.calculateLines.bind(this);
   }
 
+  boardClicked(evt) {
+    const { height, width } = this.props;
+    const e = evt.target;
+    const dim = e.getBoundingClientRect();
+    const x = evt.clientX - dim.left;
+    const y = evt.clientY - dim.top;
+    console.log(`X: ${x}, Y: ${y}, DIM:`, dim);
+
+    const oneThirdHeight = height / 3;
+    const twoThirdsHeight = oneThirdHeight * 2;
+    const oneThirdWidth = width / 3;
+    const twoThirdsWidth = oneThirdWidth * 2;
+
+    if (x <= oneThirdWidth && y <= oneThirdHeight) {
+      this.squareClicked(0);
+    }
+
+    this.squareClicked(8);
+  }
+
+  /* eslint-disable-next-line  */
   squareClicked(square) {
-    this.console.log('Square clicked!', square);
+    console.log('Square clicked!', square);
   }
 
   calculateLines() {
@@ -46,7 +68,7 @@ export default class GameBoard extends React.Component {
     );
 
     return (
-      <svg height={height} width={width}>
+      <svg height={height} width={width} onClick={this.boardClicked}>
         {lines}
       </svg>
     );

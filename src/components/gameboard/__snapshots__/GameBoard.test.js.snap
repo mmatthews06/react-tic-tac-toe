@@ -340,7 +340,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-            "lineNumber": 49,
+            "lineNumber": 71,
           },
           "actualDuration": 0,
           "actualStartTime": 0,
@@ -351,7 +351,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-              "lineNumber": 45,
+              "lineNumber": 67,
             },
             "actualDuration": 0,
             "actualStartTime": 0,
@@ -387,7 +387,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-                "lineNumber": 45,
+                "lineNumber": 67,
               },
               "actualDuration": 0,
               "actualStartTime": 0,
@@ -423,7 +423,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-                  "lineNumber": 45,
+                  "lineNumber": 67,
                 },
                 "actualDuration": 0,
                 "actualStartTime": 0,
@@ -459,7 +459,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-                    "lineNumber": 45,
+                    "lineNumber": 67,
                   },
                   "actualDuration": 0,
                   "actualStartTime": 0,
@@ -568,6 +568,7 @@ ReactWrapper {
 />,
             ],
             "height": 500,
+            "onClick": [Function],
             "width": 500,
           },
           "memoizedState": null,
@@ -601,6 +602,7 @@ ReactWrapper {
 />,
             ],
             "height": 500,
+            "onClick": [Function],
             "width": 500,
           },
           "ref": null,
@@ -978,6 +980,7 @@ ReactWrapper {
         "updateQueue": null,
       },
       "_reactInternalInstance": Object {},
+      "boardClicked": [Function],
       "calculateLines": [Function],
       "context": Object {},
       "props": Object {
@@ -1061,6 +1064,7 @@ ReactWrapper {
 />,
         ],
         "height": 500,
+        "onClick": [Function],
         "width": 500,
       },
       "ref": null,
@@ -1480,7 +1484,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-              "lineNumber": 49,
+              "lineNumber": 71,
             },
             "actualDuration": 0,
             "actualStartTime": 0,
@@ -1491,7 +1495,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-                "lineNumber": 45,
+                "lineNumber": 67,
               },
               "actualDuration": 0,
               "actualStartTime": 0,
@@ -1527,7 +1531,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-                  "lineNumber": 45,
+                  "lineNumber": 67,
                 },
                 "actualDuration": 0,
                 "actualStartTime": 0,
@@ -1563,7 +1567,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-                    "lineNumber": 45,
+                    "lineNumber": 67,
                   },
                   "actualDuration": 0,
                   "actualStartTime": 0,
@@ -1599,7 +1603,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/Users/mmatthews/Code/webdev/react-apps/react-tic-tac-toe/src/components/gameboard/GameBoard.js",
-                      "lineNumber": 45,
+                      "lineNumber": 67,
                     },
                     "actualDuration": 0,
                     "actualStartTime": 0,
@@ -1708,6 +1712,7 @@ ReactWrapper {
 />,
               ],
               "height": 500,
+              "onClick": [Function],
               "width": 500,
             },
             "memoizedState": null,
@@ -1741,6 +1746,7 @@ ReactWrapper {
 />,
               ],
               "height": 500,
+              "onClick": [Function],
               "width": 500,
             },
             "ref": null,
@@ -2118,6 +2124,7 @@ ReactWrapper {
           "updateQueue": null,
         },
         "_reactInternalInstance": Object {},
+        "boardClicked": [Function],
         "calculateLines": [Function],
         "context": Object {},
         "props": Object {
@@ -2201,6 +2208,7 @@ ReactWrapper {
 />,
           ],
           "height": 500,
+          "onClick": [Function],
           "width": 500,
         },
         "ref": null,
