@@ -47,71 +47,23 @@ ShallowWrapper {
             y2={333.3333333333333}
 />,
         ],
-        Array [
-          <GameSquare
-            height={166.66666666666666}
-            position="top-left"
-            width={166.66666666666666}
-            x={0}
-            y={0}
+        <GameBoardSquares
+          board={
+                    Array [
+                              0,
+                              0,
+                              0,
+                              1,
+                              1,
+                              1,
+                              2,
+                              2,
+                              2,
+                            ]
+          }
+          height={500}
+          width={500}
 />,
-          <GameSquare
-            height={166.66666666666666}
-            position="top-middle"
-            width={166.66666666666666}
-            x={166.66666666666666}
-            y={0}
-/>,
-          <GameSquare
-            height={166.66666666666666}
-            position="top-right"
-            width={166.66666666666666}
-            x={333.3333333333333}
-            y={0}
-/>,
-          <GameSquare
-            height={166.66666666666666}
-            position="middle-left"
-            width={166.66666666666666}
-            x={0}
-            y={166.66666666666666}
-/>,
-          <GameSquare
-            height={166.66666666666666}
-            position="middle-middle"
-            width={166.66666666666666}
-            x={166.66666666666666}
-            y={166.66666666666666}
-/>,
-          <GameSquare
-            height={166.66666666666666}
-            position="middle-right"
-            width={166.66666666666666}
-            x={333.3333333333333}
-            y={166.66666666666666}
-/>,
-          <GameSquare
-            height={166.66666666666666}
-            position="bottom-left"
-            width={166.66666666666666}
-            x={0}
-            y={333.3333333333333}
-/>,
-          <GameSquare
-            height={166.66666666666666}
-            position="bottom-middle"
-            width={166.66666666666666}
-            x={166.66666666666666}
-            y={333.3333333333333}
-/>,
-          <GameSquare
-            height={166.66666666666666}
-            position="bottom-right"
-            width={166.66666666666666}
-            x={333.3333333333333}
-            y={333.3333333333333}
-/>,
-        ],
       ],
       "height": 500,
       "width": 500,
@@ -179,131 +131,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "height": 166.66666666666666,
-          "position": "top-left",
-          "width": 166.66666666666666,
-          "x": 0,
-          "y": 0,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "top-middle",
-          "width": 166.66666666666666,
-          "x": 166.66666666666666,
-          "y": 0,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "top-right",
-          "width": 166.66666666666666,
-          "x": 333.3333333333333,
-          "y": 0,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "middle-left",
-          "width": 166.66666666666666,
-          "x": 0,
-          "y": 166.66666666666666,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "middle-middle",
-          "width": 166.66666666666666,
-          "x": 166.66666666666666,
-          "y": 166.66666666666666,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "middle-right",
-          "width": 166.66666666666666,
-          "x": 333.3333333333333,
-          "y": 166.66666666666666,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "bottom-left",
-          "width": 166.66666666666666,
-          "x": 0,
-          "y": 333.3333333333333,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "bottom-middle",
-          "width": 166.66666666666666,
-          "x": 166.66666666666666,
-          "y": 333.3333333333333,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "height": 166.66666666666666,
-          "position": "bottom-right",
-          "width": 166.66666666666666,
-          "x": 333.3333333333333,
-          "y": 333.3333333333333,
+          "board": Array [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+          ],
+          "height": 500,
+          "width": 500,
         },
         "ref": null,
         "rendered": null,
@@ -345,71 +185,23 @@ ShallowWrapper {
               y2={333.3333333333333}
 />,
           ],
-          Array [
-            <GameSquare
-              height={166.66666666666666}
-              position="top-left"
-              width={166.66666666666666}
-              x={0}
-              y={0}
+          <GameBoardSquares
+            board={
+                        Array [
+                                    0,
+                                    0,
+                                    0,
+                                    1,
+                                    1,
+                                    1,
+                                    2,
+                                    2,
+                                    2,
+                                  ]
+            }
+            height={500}
+            width={500}
 />,
-            <GameSquare
-              height={166.66666666666666}
-              position="top-middle"
-              width={166.66666666666666}
-              x={166.66666666666666}
-              y={0}
-/>,
-            <GameSquare
-              height={166.66666666666666}
-              position="top-right"
-              width={166.66666666666666}
-              x={333.3333333333333}
-              y={0}
-/>,
-            <GameSquare
-              height={166.66666666666666}
-              position="middle-left"
-              width={166.66666666666666}
-              x={0}
-              y={166.66666666666666}
-/>,
-            <GameSquare
-              height={166.66666666666666}
-              position="middle-middle"
-              width={166.66666666666666}
-              x={166.66666666666666}
-              y={166.66666666666666}
-/>,
-            <GameSquare
-              height={166.66666666666666}
-              position="middle-right"
-              width={166.66666666666666}
-              x={333.3333333333333}
-              y={166.66666666666666}
-/>,
-            <GameSquare
-              height={166.66666666666666}
-              position="bottom-left"
-              width={166.66666666666666}
-              x={0}
-              y={333.3333333333333}
-/>,
-            <GameSquare
-              height={166.66666666666666}
-              position="bottom-middle"
-              width={166.66666666666666}
-              x={166.66666666666666}
-              y={333.3333333333333}
-/>,
-            <GameSquare
-              height={166.66666666666666}
-              position="bottom-right"
-              width={166.66666666666666}
-              x={333.3333333333333}
-              y={333.3333333333333}
-/>,
-          ],
         ],
         "height": 500,
         "width": 500,
@@ -477,131 +269,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "height": 166.66666666666666,
-            "position": "top-left",
-            "width": 166.66666666666666,
-            "x": 0,
-            "y": 0,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "top-middle",
-            "width": 166.66666666666666,
-            "x": 166.66666666666666,
-            "y": 0,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "top-right",
-            "width": 166.66666666666666,
-            "x": 333.3333333333333,
-            "y": 0,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "middle-left",
-            "width": 166.66666666666666,
-            "x": 0,
-            "y": 166.66666666666666,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "middle-middle",
-            "width": 166.66666666666666,
-            "x": 166.66666666666666,
-            "y": 166.66666666666666,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "middle-right",
-            "width": 166.66666666666666,
-            "x": 333.3333333333333,
-            "y": 166.66666666666666,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "bottom-left",
-            "width": 166.66666666666666,
-            "x": 0,
-            "y": 333.3333333333333,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "bottom-middle",
-            "width": 166.66666666666666,
-            "x": 166.66666666666666,
-            "y": 333.3333333333333,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "height": 166.66666666666666,
-            "position": "bottom-right",
-            "width": 166.66666666666666,
-            "x": 333.3333333333333,
-            "y": 333.3333333333333,
+            "board": Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+            ],
+            "height": 500,
+            "width": 500,
           },
           "ref": null,
           "rendered": null,

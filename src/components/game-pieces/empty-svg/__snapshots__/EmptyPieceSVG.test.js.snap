@@ -17,8 +17,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "fill": "transparent",
-      "fillOpacity": "0",
+      "className": "empty-piece-svg",
       "height": "100%",
       "width": "100%",
       "x": "0",
@@ -34,8 +33,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "fill": "transparent",
-        "fillOpacity": "0",
+        "className": "empty-piece-svg",
         "height": "100%",
         "width": "100%",
         "x": "0",

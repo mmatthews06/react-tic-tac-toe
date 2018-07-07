@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import GameSquare from '../game-square/GameSquare';
+import GameBoardSquares from './squares/GameBoardSquares';
 
 import './GameBoard.css';
 
@@ -11,7 +11,6 @@ export default class GameBoard extends React.Component {
     super(props);
     this.squareClicked = this.squareClicked.bind(this);
     this.calculateLines = this.calculateLines.bind(this);
-    this.gameSquares = this.gameSquares.bind(this);
   }
 
   /* eslint-disable-next-line  */
@@ -42,28 +41,6 @@ export default class GameBoard extends React.Component {
     ];
   }
 
-  gameSquares() {
-    const { height, width } = this.props;
-    const oneThirdHeight = height / 3;
-    const twoThirdsHeight = oneThirdHeight * 2;
-    const oneThirdWidth = width / 3;
-    const twoThirdsWidth = oneThirdWidth * 2;
-    const sHeight = oneThirdHeight;
-    const sWidth = oneThirdWidth;
-
-    return [
-      <GameSquare x={0} y={0} height={sHeight} width={sWidth} position="top-left" />,
-      <GameSquare x={oneThirdWidth} y={0} height={sHeight} width={sWidth} position="top-middle" />,
-      <GameSquare x={twoThirdsWidth} y={0} height={sHeight} width={sWidth} position="top-right" />,
-      <GameSquare x={0} y={oneThirdHeight} height={sHeight} width={sWidth} position="middle-left" />,
-      <GameSquare x={oneThirdWidth} y={oneThirdHeight} height={sHeight} width={sWidth} position="middle-middle" />,
-      <GameSquare x={twoThirdsWidth} y={oneThirdHeight} height={sHeight} width={sWidth} position="middle-right" />,
-      <GameSquare x={0} y={twoThirdsHeight} height={sHeight} width={sWidth} position="bottom-left" />,
-      <GameSquare x={oneThirdWidth} y={twoThirdsHeight} height={sHeight} width={sWidth} position="bottom-middle" />,
-      <GameSquare x={twoThirdsWidth} y={twoThirdsHeight} height={sHeight} width={sWidth} position="bottom-right" />,
-    ];
-  }
-
   render() {
     const { height, width } = this.props;
     const lines = this.calculateLines().map(
@@ -73,7 +50,11 @@ export default class GameBoard extends React.Component {
     return (
       <svg height={height} width={width}>
         {lines}
-        {this.gameSquares()}
+        <GameBoardSquares
+          height={height}
+          width={width}
+          board={[0, 0, 0, 1, 1, 1, 2, 2, 2]}
+        />
       </svg>
     );
   }

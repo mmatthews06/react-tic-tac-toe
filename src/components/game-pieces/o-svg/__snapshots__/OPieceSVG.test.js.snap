@@ -19,12 +19,15 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <circle
-        className="o-piece-svg"
-        cx="50%"
-        cy="50%"
-        r={37.5}
+      "children": Array [
+        <EmptyPieceSVG />,
+        <circle
+          className="o-piece-svg"
+          cx="50%"
+          cy="50%"
+          r={37.5}
 />,
+      ],
       "height": "100%",
       "viewBox": "0 0 100 100",
       "width": "100%",
@@ -32,42 +35,17 @@ ShallowWrapper {
       "y": "0",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "className": "o-piece-svg",
-        "cx": "50%",
-        "cy": "50%",
-        "r": 37.5,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
-      "ref": null,
-      "rendered": null,
-      "type": "circle",
-    },
-    "type": "svg",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <circle
-          className="o-piece-svg"
-          cx="50%"
-          cy="50%"
-          r={37.5}
-/>,
-        "height": "100%",
-        "viewBox": "0 0 100 100",
-        "width": "100%",
-        "x": "0",
-        "y": "0",
-      },
-      "ref": null,
-      "rendered": Object {
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -81,6 +59,56 @@ ShallowWrapper {
         "rendered": null,
         "type": "circle",
       },
+    ],
+    "type": "svg",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <EmptyPieceSVG />,
+          <circle
+            className="o-piece-svg"
+            cx="50%"
+            cy="50%"
+            r={37.5}
+/>,
+        ],
+        "height": "100%",
+        "viewBox": "0 0 100 100",
+        "width": "100%",
+        "x": "0",
+        "y": "0",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "o-piece-svg",
+            "cx": "50%",
+            "cy": "50%",
+            "r": 37.5,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "circle",
+        },
+      ],
       "type": "svg",
     },
   ],
