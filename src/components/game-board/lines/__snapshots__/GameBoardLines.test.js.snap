@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameBoardLines should match a snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GameBoardLines
+    height={500}
+    width={500}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <line
+          className="game-board-line"
+          x1={166.66666666666666}
+          x2={166.66666666666666}
+          y1={0}
+          y2={500}
+/>,
+        <line
+          className="game-board-line"
+          x1={333.3333333333333}
+          x2={333.3333333333333}
+          y1={0}
+          y2={500}
+/>,
+        <line
+          className="game-board-line"
+          x1={0}
+          x2={500}
+          y1={166.66666666666666}
+          y2={166.66666666666666}
+/>,
+        <line
+          className="game-board-line"
+          x1={0}
+          x2={500}
+          y1={333.3333333333333}
+          y2={333.3333333333333}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "game-board-line",
+          "x1": 166.66666666666666,
+          "x2": 166.66666666666666,
+          "y1": 0,
+          "y2": 500,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "game-board-line",
+          "x1": 333.3333333333333,
+          "x2": 333.3333333333333,
+          "y1": 0,
+          "y2": 500,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "game-board-line",
+          "x1": 0,
+          "x2": 500,
+          "y1": 166.66666666666666,
+          "y2": 166.66666666666666,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "game-board-line",
+          "x1": 0,
+          "x2": 500,
+          "y1": 333.3333333333333,
+          "y2": 333.3333333333333,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <line
+            className="game-board-line"
+            x1={166.66666666666666}
+            x2={166.66666666666666}
+            y1={0}
+            y2={500}
+/>,
+          <line
+            className="game-board-line"
+            x1={333.3333333333333}
+            x2={333.3333333333333}
+            y1={0}
+            y2={500}
+/>,
+          <line
+            className="game-board-line"
+            x1={0}
+            x2={500}
+            y1={166.66666666666666}
+            y2={166.66666666666666}
+/>,
+          <line
+            className="game-board-line"
+            x1={0}
+            x2={500}
+            y1={333.3333333333333}
+            y2={333.3333333333333}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "game-board-line",
+            "x1": 166.66666666666666,
+            "x2": 166.66666666666666,
+            "y1": 0,
+            "y2": 500,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "game-board-line",
+            "x1": 333.3333333333333,
+            "x2": 333.3333333333333,
+            "y1": 0,
+            "y2": 500,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "game-board-line",
+            "x1": 0,
+            "x2": 500,
+            "y1": 166.66666666666666,
+            "y2": 166.66666666666666,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "game-board-line",
+            "x1": 0,
+            "x2": 500,
+            "y1": 333.3333333333333,
+            "y2": 333.3333333333333,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
