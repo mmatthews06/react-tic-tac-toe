@@ -9,7 +9,7 @@ describe('GameBoardLines', () => {
     const wrapper = shallow(<GameBoardLines height={500} width={500} />);
     const lines = wrapper.find('line');
     it('should have correct first vertical line', () => {
-      expect(lines.at(0).props()).toEqual({
+      expect(lines.at(0).props()).toMatchObject({
         x1: (500 / 3),
         y1: 0,
         x2: (500 / 3),
@@ -18,7 +18,7 @@ describe('GameBoardLines', () => {
     });
 
     it('should have correct second vertical line', () => {
-      expect(lines.at(1).props()).toEqual({
+      expect(lines.at(1).props()).toMatchObject({
         x1: (500 / 3) * 2,
         y1: 0,
         x2: (500 / 3) * 2,
@@ -27,7 +27,7 @@ describe('GameBoardLines', () => {
     });
 
     it('should have correct first horizontal line', () => {
-      expect(lines.at(2).props()).toEqual({
+      expect(lines.at(2).props()).toMatchObject({
         x1: 0,
         y1: 500 / 3,
         x2: 500,
@@ -36,7 +36,7 @@ describe('GameBoardLines', () => {
     });
 
     it('should have correct second horizontal line', () => {
-      expect(lines.at(3).props()).toEqual({
+      expect(lines.at(3).props()).toMatchObject({
         x1: 0,
         y1: (500 / 3) * 2,
         x2: 500,

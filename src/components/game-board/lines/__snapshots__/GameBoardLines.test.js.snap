@@ -22,24 +22,28 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <line
+          className="game-board-line"
           x1={166.66666666666666}
           x2={166.66666666666666}
           y1={0}
           y2={500}
 />,
         <line
+          className="game-board-line"
           x1={333.3333333333333}
           x2={333.3333333333333}
           y1={0}
           y2={500}
 />,
         <line
+          className="game-board-line"
           x1={0}
           x2={500}
           y1={166.66666666666666}
           y2={166.66666666666666}
 />,
         <line
+          className="game-board-line"
           x1={0}
           x2={500}
           y1={333.3333333333333}
@@ -54,6 +58,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "game-board-line",
           "x1": 166.66666666666666,
           "x2": 166.66666666666666,
           "y1": 0,
@@ -68,6 +73,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "game-board-line",
           "x1": 333.3333333333333,
           "x2": 333.3333333333333,
           "y1": 0,
@@ -82,6 +88,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "game-board-line",
           "x1": 0,
           "x2": 500,
           "y1": 166.66666666666666,
@@ -96,6 +103,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "game-board-line",
           "x1": 0,
           "x2": 500,
           "y1": 333.3333333333333,
@@ -116,24 +124,28 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <line
+            className="game-board-line"
             x1={166.66666666666666}
             x2={166.66666666666666}
             y1={0}
             y2={500}
 />,
           <line
+            className="game-board-line"
             x1={333.3333333333333}
             x2={333.3333333333333}
             y1={0}
             y2={500}
 />,
           <line
+            className="game-board-line"
             x1={0}
             x2={500}
             y1={166.66666666666666}
             y2={166.66666666666666}
 />,
           <line
+            className="game-board-line"
             x1={0}
             x2={500}
             y1={333.3333333333333}
@@ -148,6 +160,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "game-board-line",
             "x1": 166.66666666666666,
             "x2": 166.66666666666666,
             "y1": 0,
@@ -162,6 +175,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "game-board-line",
             "x1": 333.3333333333333,
             "x2": 333.3333333333333,
             "y1": 0,
@@ -176,6 +190,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "game-board-line",
             "x1": 0,
             "x2": 500,
             "y1": 166.66666666666666,
@@ -190,6 +205,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "game-board-line",
             "x1": 0,
             "x2": 500,
             "y1": 333.3333333333333,
