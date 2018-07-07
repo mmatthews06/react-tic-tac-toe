@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import EmptyPieceSVG from '../game-pieces/empty-svg/EmptyPieceSVG';
+import XPieceSVG from '../game-pieces/x-svg/XPieceSVG';
+
 // eslint-disable-next-line object-curly-newline
 export default function GameSquare({ x, y, height, width, position }) {
   return (
@@ -12,7 +15,7 @@ export default function GameSquare({ x, y, height, width, position }) {
       width={width}
       onClick={() => console.log(`${position} ${x} ${y} ${height} ${width}`)}
     >
-      <rect x="0" y="0" height="100%" width="100%" fill="transparent" />
+      <XPieceSVG />
     </svg>
   );
 }

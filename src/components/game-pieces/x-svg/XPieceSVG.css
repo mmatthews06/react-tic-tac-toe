@@ -1,0 +1,6 @@
+
+/* TODO: Make stroke-width global for pieces in Sass */
+.x-piece-svg line {
+  stroke: red;
+  stroke-width: 2;
+}
