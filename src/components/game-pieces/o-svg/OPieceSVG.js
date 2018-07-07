@@ -2,6 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import EmptyPieceSVG from '../empty-svg/EmptyPieceSVG';
+
 import './OPieceSVG.css';
 
 export default function OPieceSVG({ margin }) {
@@ -9,6 +11,7 @@ export default function OPieceSVG({ margin }) {
 
   return (
     <svg x="0" y="0" height="100%" width="100%" viewBox="0 0 100 100">
+      <EmptyPieceSVG />
       <circle
         className="o-piece-svg"
         cx="50%"

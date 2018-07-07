@@ -10,6 +10,7 @@ import OPieceSVG from '../game-pieces/o-svg/OPieceSVG';
 export default function GameSquare({ x, y, height, width, position }) {
   return (
     <svg
+      id={`${position}-square`}
       x={x}
       y={y}
       height={height}
