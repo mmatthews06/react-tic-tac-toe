@@ -18,37 +18,189 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
-        500,
-        500,
+        <line
+          x1={166.66666666666666}
+          x2={166.66666666666666}
+          y1={0}
+          y2={500}
+/>,
+        <line
+          x1={333.3333333333333}
+          x2={333.3333333333333}
+          y1={0}
+          y2={500}
+/>,
+        <line
+          x1={0}
+          x2={500}
+          y1={166.66666666666666}
+          y2={166.66666666666666}
+/>,
+        <line
+          x1={0}
+          x2={500}
+          y1={333.3333333333333}
+          y2={333.3333333333333}
+/>,
       ],
     },
     "ref": null,
     "rendered": Array [
-      500,
-      500,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "x1": 166.66666666666666,
+          "x2": 166.66666666666666,
+          "y1": 0,
+          "y2": 500,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "x1": 333.3333333333333,
+          "x2": 333.3333333333333,
+          "y1": 0,
+          "y2": 500,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "x1": 0,
+          "x2": 500,
+          "y1": 166.66666666666666,
+          "y2": 166.66666666666666,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "x1": 0,
+          "x2": 500,
+          "y1": 333.3333333333333,
+          "y2": 333.3333333333333,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "line",
+      },
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
-          500,
-          500,
+          <line
+            x1={166.66666666666666}
+            x2={166.66666666666666}
+            y1={0}
+            y2={500}
+/>,
+          <line
+            x1={333.3333333333333}
+            x2={333.3333333333333}
+            y1={0}
+            y2={500}
+/>,
+          <line
+            x1={0}
+            x2={500}
+            y1={166.66666666666666}
+            y2={166.66666666666666}
+/>,
+          <line
+            x1={0}
+            x2={500}
+            y1={333.3333333333333}
+            y2={333.3333333333333}
+/>,
         ],
       },
       "ref": null,
       "rendered": Array [
-        500,
-        500,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "x1": 166.66666666666666,
+            "x2": 166.66666666666666,
+            "y1": 0,
+            "y2": 500,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "x1": 333.3333333333333,
+            "x2": 333.3333333333333,
+            "y1": 0,
+            "y2": 500,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "x1": 0,
+            "x2": 500,
+            "y1": 166.66666666666666,
+            "y2": 166.66666666666666,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "x1": 0,
+            "x2": 500,
+            "y1": 333.3333333333333,
+            "y2": 333.3333333333333,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "line",
+        },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
