@@ -218,7 +218,6 @@ describe('TicTacToe', () => {
       });
 
       it('should block X again before they fork', () => {
-        console.log('NEW TEST..................');
         const game = new TicTacToe([
           X, _, _,
           _, O, _,
