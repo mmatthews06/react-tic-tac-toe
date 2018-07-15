@@ -250,4 +250,214 @@ describe('TicTacToe', () => {
       });
     });
   });
+
+  describe('nextTurn', () => {
+    it('first move: pick a corner', () => {
+      const game = new TicTacToe();
+      const finished = game.nextTurn();
+      const movePos = game.board.indexOf(O);
+      expect(finished).toBe(false);
+      expect([0, 2, 6, 8]).toContain(movePos);
+    });
+
+    describe('winning moves', () => {
+      it('should happen along a diagonal', () => {
+        const game = new TicTacToe([
+          X, _, O,
+          _, O, _,
+          _, _, X,
+        ]);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(true);
+        expect(game.board).toEqual([
+          X, _, O,
+          _, O, _,
+          O, _, X,
+        ]);
+      });
+
+      it('should happen along a row', () => {
+        const game = new TicTacToe([
+          O, _, O,
+          _, X, _,
+          _, _, X,
+        ]);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(true);
+        expect(game.board).toEqual([
+          O, O, O,
+          _, X, _,
+          _, _, X,
+        ]);
+      });
+
+      it('should happen for the non-default player', () => {
+        const game = new TicTacToe([
+          O, _, O,
+          _, _, _,
+          X, _, X,
+        ], O);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(true);
+        expect(game.board).toEqual([
+          O, _, O,
+          _, _, _,
+          X, X, X,
+        ]);
+      });
+    });
+
+    describe('blocking moves', () => {
+      it('should happen along a diagonal', () => {
+        const game = new TicTacToe([
+          X, _, O,
+          _, O, _,
+          _, _, X,
+        ], O);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          X, _, O,
+          _, O, _,
+          X, _, X,
+        ]);
+      });
+
+      it('should happen along a row', () => {
+        const game = new TicTacToe([
+          O, X, O,
+          _, X, _,
+          _, _, X,
+        ], X);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          O, X, O,
+          _, X, _,
+          _, O, X,
+        ]);
+      });
+
+      it('should happen for the default player', () => {
+        const game = new TicTacToe([
+          O, _, _,
+          _, O, _,
+          X, _, X,
+        ]);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          O, _, _,
+          _, O, _,
+          X, O, X,
+        ]);
+      });
+    });
+
+    describe('forking behavior', () => {
+      it('should block the best of the 2 positions', () => {
+        const game = new TicTacToe([
+          O, _, X,
+          _, _, O,
+          _, X, _,
+        ], O);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          O, _, X,
+          _, X, O,
+          _, X, _,
+        ]);
+      });
+    });
+
+    describe('center square', () => {
+      it('should pick this one readily', () => {
+        const game = new TicTacToe([
+          X, _, _,
+          _, _, _,
+          _, _, _,
+        ]);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          X, _, _,
+          _, O, _,
+          _, _, _,
+        ]);
+      });
+    });
+
+    describe('opposite corner move', () => {
+      it('should work along diagonal 1', () => {
+        const game = new TicTacToe([
+          O, _, _,
+          _, X, _,
+          _, _, _,
+        ]);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          O, _, _,
+          _, X, _,
+          _, _, O,
+        ]);
+      });
+
+      it('should work along diagonal 2', () => {
+        const game = new TicTacToe([
+          _, _, _,
+          _, X, _,
+          O, _, _,
+        ]);
+
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          _, _, O,
+          _, X, _,
+          O, _, _,
+        ]);
+      });
+    });
+
+    describe('first available corner', () => {
+      const game = new TicTacToe([
+        _, _, _,
+        _, X, _,
+        _, _, _,
+      ]);
+      const finished = game.nextTurn();
+      const movePos = game.board.indexOf(O);
+      expect(finished).toBe(false);
+      expect(game.board.reduce((s, i) => s + i, 0)).toBe(X + O);
+      expect([0, 2, 6, 8]).toContain(movePos);
+    });
+
+    describe('edge moves', () => {
+      it('should move there sometimes', () => {
+        const game = new TicTacToe([
+          O, X, O,
+          O, X, O,
+          X, _, X,
+        ]);
+        const finished = game.nextTurn();
+        expect(finished).toBe(false);
+        expect(game.board).toEqual([
+          O, X, O,
+          O, X, O,
+          X, O, X,
+        ]);
+      });
+    });
+  });
 });

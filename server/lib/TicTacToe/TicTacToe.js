@@ -40,6 +40,19 @@ class TicTacToe {
     );
   }
 
+  lineVals(line) {
+    return line.map(i => this.board[i]);
+  }
+
+  lineSum(line) {
+    return this.lineVals(line).reduce((s, i) => s + i, 0);
+  }
+
+  checkWinner(player) {
+    const winSum = 3 * player;
+    return LINES.some(line => this.lineSum(line) === winSum);
+  }
+
   // makeMove(player, gridIndex) {
   //   // playerChar = this.O if player == this.player1 else this.X
   //   // otherPlayerChar = this.X if playerChar == this.O else this.O
@@ -75,7 +88,6 @@ class TicTacToe {
   nextTurn() {
     // Returns true if this the computer player won
     // with this turn's move.
-
     const player = this.player2;
     const otherPlayer = this.player1;
 
@@ -92,62 +104,74 @@ class TicTacToe {
 
     // Try to win, check for two in a row
     const win = 2 * player;
-    // for line in this.LINES:
-    LINES.forEach((line) => {
+    const finished = LINES.some((line) => {
       if (this.sumAndSet(line, win, player)) {
         return true;
       }
+      return false;
     });
+
+    if (finished) {
+      return true;
+    }
 
     // Try to block the other player
     const block = 2 * otherPlayer;
-    // for line in this.LINES:
-    LINES.forEach((line) => {
+    const blocked = LINES.some((line) => {
       if (this.sumAndSet(line, block, player)) {
-        return false;
+        return true;
       }
+      return false;
     });
 
+    if (blocked) {
+      return false;
+    }
+
     // Either try to fork, or block the opponent from forking.
-    // if this.forkTestAndSet(player, otherPlayer):
     if (this.forkTestAndSet(player, otherPlayer)) {
       return false;
     }
 
     // Fill in the center, if available
-    // if this.board[CENTER] == EMPTY:
     if (this.board[CENTER] === EMPTY) {
       this.board[CENTER] = player;
       return false;
     }
 
     // Fill in the corner caddy-corner to first corner
-    // if this.turn == 3 and this.sumAndSet(DIAG1, X+O, player):
     if (this.turn === 3 && this.sumAndSet(DIAG1, X + O, player)) {
       return false;
     }
-    // if this.turn == 3 and this.sumAndSet(DIAG2, X+O, player):
     if (this.turn === 3 && this.sumAndSet(DIAG2, X + O, player)) {
       return false;
     }
 
     // Fill in the first available corner:
-    // for cornerIndex in CORNERS:
-    CORNERS.forEach((cornerIndex) => {
+    const cornerPicked = CORNERS.some((cornerIndex) => {
       if (this.board[cornerIndex] === EMPTY) {
         this.board[cornerIndex] = player;
-        return false;
+        return true;
       }
+      return false;
     });
 
-    // Fill in the first available corner:
-    // for edgeIndex in this.EDGES:
-    EDGES.forEach((edgeIndex) => {
+    if (cornerPicked) {
+      return false;
+    }
+
+    // Fill in the first available edge:
+    const edgePicked = EDGES.some((edgeIndex) => {
       if (this.board[edgeIndex] === EMPTY) {
         this.board[edgeIndex] = player;
-        return false;
+        return true;
       }
+      return false;
     });
+
+    if (edgePicked) {
+      return false;
+    }
 
     // TODO: This should definitely throw an exception, since we didn't
     // make a move.
@@ -174,18 +198,6 @@ class TicTacToe {
     return false;
   }
 
-  lineVals(line) {
-    return line.map(i => this.board[i]);
-  }
-
-  checkWinner(player) {
-    const winSum = 3 * player;
-    return LINES.some((line) => {
-      const lineSum = this.lineVals(line).reduce((s, i) => s + i, 0);
-      return lineSum === winSum;
-    });
-  }
-
   forkTestAndSet(player, otherPlayer) {
     // Try to fork for this player:
     const playerForkPositions = this.forkablePositions(player);
@@ -205,7 +217,7 @@ class TicTacToe {
     // Try to find a line that only has one of the player's characters,
     // and then fill in one that doesn't leave a fork position open.
     return LINES.some((line) => {
-      const lineSum = this.lineVals(line).reduce((s, i) => s + i, 0);
+      const lineSum = this.lineSum(line);
       if (lineSum === otherPlayer) {
         const emptyPositions = [];
         line.forEach((i) => {
@@ -249,7 +261,6 @@ class TicTacToe {
     * This is relatively inefficient, but it's not really worth making
     * it faster.
     */
-
     const forkPositions = [];
     this.board.forEach((playerChar, index) => {
       if (playerChar !== EMPTY) {
@@ -258,7 +269,7 @@ class TicTacToe {
 
       let forkableLines = 0;
       LINES.forEach((line) => {
-        const sum = this.lineVals(line).reduce((s, i) => s + i, 0);
+        const sum = this.lineSum(line);
         if (line.indexOf(index) > -1 && sum === player) {
           forkableLines += 1;
         }
