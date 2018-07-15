@@ -32,6 +32,17 @@ class TicTacToe {
     this.player2 = player1 === X ? O : X;
   }
 
+  toJSON() {
+    return {
+      board: this.board,
+      turn: this.turn,
+      ended: this.ended,
+      winner: this.winner,
+      player1: this.player1,
+      player2: this.player2,
+    };
+  }
+
   getTurnNumber() {
     return this.board.reduce(
       (empties, i) => (i === EMPTY ? empties - 1 : empties), 9,
