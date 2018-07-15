@@ -3,7 +3,7 @@ This is a demo project, where a user can play Tic-Tac-Toe with a very clever Nod
 
 This project uses React 16.x and Node.js 8.x (LTS) at present. There are plans to add more front-end renderers besides SVG (like a Three.js board), and one or two more back-end players that are more AI-like and probabilistic in its moves.
 
-**NOTE**: As of 7/15/2018, the back-end has barely been implemented.
+**NOTE**: As of 7/15/2018, the server plays Tic-Tac-Toe, but the UI gives little indication of a win.
 
 ### Installation
 This set of steps currently only starts up the *dev* server, but it should suffice as a demo.

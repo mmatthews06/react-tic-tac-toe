@@ -10,9 +10,10 @@ import OPieceSVG from '../game-pieces/o-svg/OPieceSVG';
 const props = {
   x: 0,
   y: 0,
-  position: 'top-left',
+  position: 0,
   height: 167,
   width: 167,
+  playerMoveHandler: () => {},
 };
 
 describe('GameSquare', () => {

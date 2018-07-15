@@ -14,4 +14,16 @@ app.get('/new', (req, res) => {
   res.json(game.toJSON());
 });
 
+app.post('/move', (req, res) => {
+  const { board, player1 } = req.body;
+  const game = new TicTacToe(board, player1);
+  if (game.checkWinner(player1)) {
+    game.setWinner(player1);
+  } else {
+    game.nextTurn();
+  }
+  console.log('/tic-tac-toe/move response:', game.toJSON());
+  res.json(game.toJSON());
+});
+
 module.exports = app;

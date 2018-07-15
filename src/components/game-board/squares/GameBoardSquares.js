@@ -14,7 +14,7 @@ function piece(pieceNum) {
   return (<PieceName margin={25} />);
 }
 
-export default function GameBoardSquares({ board, height, width }) {
+export default function GameBoardSquares({ board, height, width, playerMoveHandler }) {
   const oneThirdHeight = height / 3;
   const twoThirdsHeight = oneThirdHeight * 2;
   const oneThirdWidth = width / 3;
@@ -24,31 +24,103 @@ export default function GameBoardSquares({ board, height, width }) {
 
   return (
     <React.Fragment>
-      <GameSquare x={0} y={0} height={sHeight} width={sWidth} position="top-left">
+      {/* top-left */}
+      <GameSquare
+        x={0}
+        y={0}
+        height={sHeight}
+        width={sWidth}
+        position={0}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[0])}
       </GameSquare>
-      <GameSquare x={oneThirdWidth} y={0} height={sHeight} width={sWidth} position="top-middle">
+      {/* "top-middle" */}
+      <GameSquare
+        x={oneThirdWidth}
+        y={0}
+        height={sHeight}
+        width={sWidth}
+        position={1}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[1])}
       </GameSquare>
-      <GameSquare x={twoThirdsWidth} y={0} height={sHeight} width={sWidth} position="top-right">
+      {/* "top-right" */}
+      <GameSquare
+        x={twoThirdsWidth}
+        y={0}
+        height={sHeight}
+        width={sWidth}
+        position={2}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[2])}
       </GameSquare>
-      <GameSquare x={0} y={oneThirdHeight} height={sHeight} width={sWidth} position="middle-left">
+      {/* "middle-left" */}
+      <GameSquare
+        x={0}
+        y={oneThirdHeight}
+        height={sHeight}
+        width={sWidth}
+        position={3}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[3])}
       </GameSquare>
-      <GameSquare x={oneThirdWidth} y={oneThirdHeight} height={sHeight} width={sWidth} position="middle-middle">
+      {/* "middle-middle" */}
+      <GameSquare
+        x={oneThirdWidth}
+        y={oneThirdHeight}
+        height={sHeight}
+        width={sWidth}
+        position={4}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[4])}
       </GameSquare>
-      <GameSquare x={twoThirdsWidth} y={oneThirdHeight} height={sHeight} width={sWidth} position="middle-right">
+      {/* "middle-right" */}
+      <GameSquare
+        x={twoThirdsWidth}
+        y={oneThirdHeight}
+        height={sHeight}
+        width={sWidth}
+        position={5}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[5])}
       </GameSquare>
-      <GameSquare x={0} y={twoThirdsHeight} height={sHeight} width={sWidth} position="bottom-left">
+      {/* "bottom-left" */}
+      <GameSquare
+        x={0}
+        y={twoThirdsHeight}
+        height={sHeight}
+        width={sWidth}
+        position={6}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[6])}
       </GameSquare>
-      <GameSquare x={oneThirdWidth} y={twoThirdsHeight} height={sHeight} width={sWidth} position="bottom-middle">
+      {/* "bottom-middle" */}
+      <GameSquare
+        x={oneThirdWidth}
+        y={twoThirdsHeight}
+        height={sHeight}
+        width={sWidth}
+        position={7}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[7])}
       </GameSquare>
-      <GameSquare x={twoThirdsWidth} y={twoThirdsHeight} height={sHeight} width={sWidth} position="bottom-right">
+      {/* "bottom-right" */}
+      <GameSquare
+        x={twoThirdsWidth}
+        y={twoThirdsHeight}
+        height={sHeight}
+        width={sWidth}
+        position={8}
+        playerMoveHandler={playerMoveHandler}
+      >
         {piece(board[8])}
       </GameSquare>
     </React.Fragment>
@@ -59,4 +131,5 @@ GameBoardSquares.propTypes = {
   board: PropTypes.arrayOf(PropTypes.number).isRequired,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
+  playerMoveHandler: PropTypes.func.isRequired,
 };
