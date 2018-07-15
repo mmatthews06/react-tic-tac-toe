@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GameBoard from './components/game-board/GameBoard';
+import GameBoardContainer from './containers/GameBoardContainer/GameBoardContainer';
 
 import './App.css';
 
@@ -12,7 +12,7 @@ function App() {
           React Tic-Tac-Toe
         </h1>
       </header>
-      <GameBoard />
+      <GameBoardContainer />
     </div>
   );
 }

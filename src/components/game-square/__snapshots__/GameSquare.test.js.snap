@@ -4,7 +4,13 @@ exports[`GameSquare should match a default snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GameSquare>
+  Symbol(enzyme.__unrendered__): <GameSquare
+    height={167}
+    position="top-left"
+    width={167}
+    x={0}
+    y={0}
+>
     <EmptyPieceSVG />
 </GameSquare>,
   Symbol(enzyme.__renderer__): Object {
@@ -20,12 +26,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <EmptyPieceSVG />,
-      "height": undefined,
-      "id": "undefined-square",
+      "height": 167,
+      "id": "top-left-square",
       "onClick": [Function],
-      "width": undefined,
-      "x": undefined,
-      "y": undefined,
+      "width": 167,
+      "x": 0,
+      "y": 0,
     },
     "ref": null,
     "rendered": Object {
@@ -46,12 +52,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <EmptyPieceSVG />,
-        "height": undefined,
-        "id": "undefined-square",
+        "height": 167,
+        "id": "top-left-square",
         "onClick": [Function],
-        "width": undefined,
-        "x": undefined,
-        "y": undefined,
+        "width": 167,
+        "x": 0,
+        "y": 0,
       },
       "ref": null,
       "rendered": Object {
@@ -80,7 +86,13 @@ exports[`GameSquare should match a snapshot with a child 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GameSquare>
+  Symbol(enzyme.__unrendered__): <GameSquare
+    height={167}
+    position="top-left"
+    width={167}
+    x={0}
+    y={0}
+>
     <OPieceSVG
         margin={25}
     />
@@ -100,12 +112,12 @@ ShallowWrapper {
       "children": <OPieceSVG
         margin={25}
 />,
-      "height": undefined,
-      "id": "undefined-square",
+      "height": 167,
+      "id": "top-left-square",
       "onClick": [Function],
-      "width": undefined,
-      "x": undefined,
-      "y": undefined,
+      "width": 167,
+      "x": 0,
+      "y": 0,
     },
     "ref": null,
     "rendered": Object {
@@ -130,12 +142,12 @@ ShallowWrapper {
         "children": <OPieceSVG
           margin={25}
 />,
-        "height": undefined,
-        "id": "undefined-square",
+        "height": 167,
+        "id": "top-left-square",
         "onClick": [Function],
-        "width": undefined,
-        "x": undefined,
-        "y": undefined,
+        "width": 167,
+        "x": 0,
+        "y": 0,
       },
       "ref": null,
       "rendered": Object {

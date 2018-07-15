@@ -7,15 +7,23 @@ import EmptyPieceSVG from '../game-pieces/empty-svg/EmptyPieceSVG';
 import XPieceSVG from '../game-pieces/x-svg/XPieceSVG';
 import OPieceSVG from '../game-pieces/o-svg/OPieceSVG';
 
+const props = {
+  x: 0,
+  y: 0,
+  position: 'top-left',
+  height: 167,
+  width: 167,
+};
+
 describe('GameSquare', () => {
   describe('Child Piece Rendering', () => {
     it('should render an EmptyPieceSVG by default', () => {
-      expect(shallow(<GameSquare />).find(EmptyPieceSVG)).toHaveLength(1);
+      expect(shallow(<GameSquare {...props} />).find(EmptyPieceSVG)).toHaveLength(1);
     });
 
     it('should render an XPieceSVG instead of default if passed as a child', () => {
       const wrapper = shallow(
-        <GameSquare>
+        <GameSquare {...props}>
           <XPieceSVG />
         </GameSquare>,
       );
@@ -25,7 +33,7 @@ describe('GameSquare', () => {
 
     it('should render an OPieceSVG instead of default if passed as a child', () => {
       const wrapper = shallow(
-        <GameSquare>
+        <GameSquare {...props}>
           <OPieceSVG />
         </GameSquare>,
       );
@@ -35,12 +43,12 @@ describe('GameSquare', () => {
   });
 
   it('should match a default snapshot', () => {
-    expect(shallow(<GameSquare />)).toMatchSnapshot();
+    expect(shallow(<GameSquare {...props} />)).toMatchSnapshot();
   });
 
   it('should match a snapshot with a child', () => {
     expect(shallow(
-      <GameSquare>
+      <GameSquare {...props}>
         <OPieceSVG />
       </GameSquare>,
     )).toMatchSnapshot();
