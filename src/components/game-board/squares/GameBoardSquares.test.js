@@ -12,7 +12,7 @@ describe('GameBoardSquares', () => {
   describe('with an even board', () => {
     const board = [_, X, O, _, X, O, _, X, O];
     const wrapper = shallow(
-      <GameBoardSquares board={board} height={500} width={500} />,
+      <GameBoardSquares board={board} height={500} width={500} playerMoveHandler={() => {}} />,
     );
 
     it('should render correct number of empty pieces', () => {
@@ -31,7 +31,7 @@ describe('GameBoardSquares', () => {
   describe('with an different board', () => {
     const board = [_, X, _, X, _, O, O, O, O];
     const wrapper = shallow(
-      <GameBoardSquares board={board} height={500} width={500} />,
+      <GameBoardSquares board={board} height={500} width={500} playerMoveHandler={() => {}} />,
     );
 
     it('should render correct number of empty pieces', () => {

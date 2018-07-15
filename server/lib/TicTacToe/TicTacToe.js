@@ -62,6 +62,11 @@ class TicTacToe {
     return LINES.some(line => this.lineSum(line) === winSum);
   }
 
+  setWinner(player) {
+    this.ended = true;
+    this.winner = player;
+  }
+
   // makeMove(player, gridIndex) {
   //   // playerChar = this.O if player == this.player1 else this.X
   //   // otherPlayerChar = this.X if playerChar == this.O else this.O
@@ -121,6 +126,8 @@ class TicTacToe {
     });
 
     if (finished) {
+      this.ended = true;
+      this.winner = this.player2;
       return true;
     }
 

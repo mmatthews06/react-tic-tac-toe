@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 
 import EmptyPieceSVG from '../game-pieces/empty-svg/EmptyPieceSVG';
 
-// eslint-disable-next-line object-curly-newline
-export default function GameSquare({ x, y, height, width, position, children }) {
+export default function GameSquare({ x, y, height, width, position, children, playerMoveHandler }) {
   return (
     <svg
       id={`${position}-square`}
@@ -13,7 +12,7 @@ export default function GameSquare({ x, y, height, width, position, children }) 
       y={y}
       height={height}
       width={width}
-      onClick={() => console.log(`${position} ${x} ${y} ${height} ${width}`)}
+      onClick={() => playerMoveHandler(position)}
     >
       {children}
     </svg>
@@ -22,11 +21,12 @@ export default function GameSquare({ x, y, height, width, position, children }) 
 
 GameSquare.propTypes = {
   children: PropTypes.element,
-  position: PropTypes.string.isRequired,
+  position: PropTypes.number.isRequired,
   x: PropTypes.number.isRequired,
   y: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
+  playerMoveHandler: PropTypes.func.isRequired,
 };
 
 GameSquare.defaultProps = {

@@ -271,6 +271,8 @@ describe('TicTacToe', () => {
 
         const finished = game.nextTurn();
         expect(finished).toBe(true);
+        expect(game.ended).toBe(true);
+        expect(game.winner).toBe(O);
         expect(game.board).toEqual([
           X, _, O,
           _, O, _,
@@ -287,6 +289,8 @@ describe('TicTacToe', () => {
 
         const finished = game.nextTurn();
         expect(finished).toBe(true);
+        expect(game.ended).toBe(true);
+        expect(game.winner).toBe(O);
         expect(game.board).toEqual([
           O, O, O,
           _, X, _,
@@ -303,6 +307,8 @@ describe('TicTacToe', () => {
 
         const finished = game.nextTurn();
         expect(finished).toBe(true);
+        expect(game.ended).toBe(true);
+        expect(game.winner).toBe(X);
         expect(game.board).toEqual([
           O, _, O,
           _, _, _,

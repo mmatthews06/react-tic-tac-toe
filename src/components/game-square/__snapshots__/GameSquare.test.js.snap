@@ -6,7 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <GameSquare
     height={167}
-    position="top-left"
+    playerMoveHandler={[Function]}
+    position={0}
     width={167}
     x={0}
     y={0}
@@ -27,7 +28,7 @@ ShallowWrapper {
     "props": Object {
       "children": <EmptyPieceSVG />,
       "height": 167,
-      "id": "top-left-square",
+      "id": "0-square",
       "onClick": [Function],
       "width": 167,
       "x": 0,
@@ -53,7 +54,7 @@ ShallowWrapper {
       "props": Object {
         "children": <EmptyPieceSVG />,
         "height": 167,
-        "id": "top-left-square",
+        "id": "0-square",
         "onClick": [Function],
         "width": 167,
         "x": 0,
@@ -88,7 +89,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <GameSquare
     height={167}
-    position="top-left"
+    playerMoveHandler={[Function]}
+    position={0}
     width={167}
     x={0}
     y={0}
@@ -113,7 +115,7 @@ ShallowWrapper {
         margin={25}
 />,
       "height": 167,
-      "id": "top-left-square",
+      "id": "0-square",
       "onClick": [Function],
       "width": 167,
       "x": 0,
@@ -143,7 +145,7 @@ ShallowWrapper {
           margin={25}
 />,
         "height": 167,
-        "id": "top-left-square",
+        "id": "0-square",
         "onClick": [Function],
         "width": 167,
         "x": 0,
