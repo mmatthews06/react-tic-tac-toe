@@ -50,13 +50,15 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "start:api": "node server/server.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "test:coverage": "node scripts/test.js --env=jsdom --coverage"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1"
+    "enzyme-adapter-react-16": "^1.1.1",
+    "supertest": "^3.1.0"
   },
   "jest": {
     "collectCoverageFrom": [
