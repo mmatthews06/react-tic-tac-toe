@@ -27,7 +27,7 @@ describe('Tic-Tac-Toe Express App', () => {
     if (game.turn === 1) {
       expect(sum).toBe(4);
     } else {
-      expect(sum).toBe(1);
+      expect(sum).toBe(0);
     }
   });
 });

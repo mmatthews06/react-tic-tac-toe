@@ -24,7 +24,7 @@ const EDGES = [1, 3, 5, 7]; // Board's edges
 
 class TicTacToe {
   constructor(board = DEFAULT_BOARD, player1 = X) {
-    this.board = board;
+    this.board = Array.from(board);
     this.turn = this.getTurnNumber();
     this.ended = false;
     this.winner = null;
@@ -292,4 +292,9 @@ class TicTacToe {
   }
 }
 
-module.exports = { TicTacToe };
+module.exports = {
+  TicTacToe,
+  EMPTY,
+  X,
+  O,
+};
