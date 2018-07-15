@@ -1,16 +1,14 @@
-/* eslint-disable consistent-return */
-const DEFAULT_BOARD = [
-  0, 0, 0,
-  0, 0, 0,
-  0, 0, 0,
-];
-
 const EMPTY = 0; // empty board position specifier
+const X = 1; // "player" X's integer to put in the board
+const O = 4; // "player" O's integer to put in the board
+const DEFAULT_BOARD = [
+  EMPTY, EMPTY, EMPTY,
+  EMPTY, EMPTY, EMPTY,
+  EMPTY, EMPTY, EMPTY,
+];
 // const END_WIN = 0
 // const END_LOSS = 1
 // const END_DRAW = 2
-const X = 1; // "player" X's integer to put in the board
-const O = 4; // "player" O's integer to put in the board
 const ROW1 = [0, 1, 2]; // Indexes into the board list
 const ROW2 = [3, 4, 5]; // Indexes into the board list
 const ROW3 = [6, 7, 8]; // Indexes into the board list
