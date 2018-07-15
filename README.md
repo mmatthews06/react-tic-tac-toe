@@ -3,7 +3,7 @@ This is a demo project, where a user can play Tic-Tac-Toe with a very clever Nod
 
 This project uses React 16.x and Node.js 8.x (LTS) at present. There are plans to add more front-end renderers besides SVG (like a Three.js board), and one or two more back-end players that are more AI-like and probabilistic in its moves.
 
-**NOTE**: As of 7/7/2018, the back-end has not been implemented yet.
+**NOTE**: As of 7/15/2018, the back-end has barely been implemented.
 
 ### Installation
 This set of steps currently only starts up the *dev* server, but it should suffice as a demo.
@@ -16,10 +16,14 @@ This set of steps currently only starts up the *dev* server, but it should suffi
  ```bash
  npm install
  ```
- 4. Run the front-end:
+ 4. Run the API server:
+  ```bash
+  npm run start:api
+  ```
+ 5. Run the front-end:
   ```bash
   npm start
   ```
- 5. If a browser does not open up immediately, navigate to [http://localhost:3000](http://localhost:3000) in a browser.
+ 6. If a browser does not open up immediately, navigate to [http://localhost:3000](http://localhost:3000) in a browser.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

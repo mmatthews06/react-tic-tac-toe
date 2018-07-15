@@ -8,7 +8,7 @@ import XPieceSVG from '../../game-pieces/x-svg/XPieceSVG';
 import OPieceSVG from '../../game-pieces/o-svg/OPieceSVG';
 
 // TODO: Move much of this to a common library.
-const pieces = [EmptyPieceSVG, XPieceSVG, OPieceSVG];
+const pieces = { 0: EmptyPieceSVG, 1: XPieceSVG, 4: OPieceSVG };
 function piece(pieceNum) {
   const PieceName = pieces[pieceNum];
   return (<PieceName margin={25} />);

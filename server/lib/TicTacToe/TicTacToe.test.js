@@ -1,9 +1,10 @@
 /* global describe, expect, it */
-const { TicTacToe } = require('./TicTacToe');
-
-const _ = 0;
-const X = 1;
-const O = 4;
+const {
+  TicTacToe,
+  EMPTY: _,
+  X,
+  O,
+} = require('./TicTacToe');
 
 describe('TicTacToe', () => {
   describe('turn calculation', () => {
