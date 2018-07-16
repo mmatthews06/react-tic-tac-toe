@@ -482,5 +482,55 @@ describe('TicTacToe', () => {
         ]);
       });
     });
+
+    describe('final game moves', () => {
+      it('should fill in the final index', () => {
+        const game = new TicTacToe([
+          O, X, O,
+          O, X, _,
+          X, O, X,
+        ]);
+        game.nextTurn();
+        expect(game.ended).toBe(true);
+        expect(game.winner).toBe(null);
+        expect(game.board).toEqual([
+          O, X, O,
+          O, X, O,
+          X, O, X,
+        ]);
+      });
+
+      it('should ensure no moves on a full board', () => {
+        const game = new TicTacToe([
+          O, X, O,
+          O, X, O,
+          X, O, X,
+        ]);
+        game.nextTurn();
+        expect(game.ended).toBe(true);
+        expect(game.winner).toBe(null);
+        expect(game.board).toEqual([
+          O, X, O,
+          O, X, O,
+          X, O, X,
+        ]);
+      });
+
+      it('should be able to win a game on the last move.', () => {
+        const game = new TicTacToe([
+          O, X, O,
+          X, X, _,
+          X, O, O,
+        ]);
+        game.nextTurn();
+        expect(game.ended).toBe(true);
+        expect(game.winner).toBe(O);
+        expect(game.board).toEqual([
+          O, X, O,
+          X, X, O,
+          X, O, O,
+        ]);
+      });
+    });
   });
 });
