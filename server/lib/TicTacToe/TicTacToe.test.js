@@ -204,6 +204,22 @@ describe('TicTacToe', () => {
     describe('to block the other player', () => {
       it('should block X before they fork', () => {
         const game = new TicTacToe([
+          X, _, _,
+          _, O, _,
+          _, _, X,
+        ]);
+
+        const forked = game.forkTestAndSet(O, X);
+        expect(forked).toBe(true);
+        expect(game.board).toEqual([
+          X, _, _,
+          _, O, O,
+          _, _, X,
+        ]);
+      });
+
+      it('should keep blocking X before they fork', () => {
+        const game = new TicTacToe([
           X, _, O,
           _, O, _,
           _, _, X,
@@ -213,8 +229,8 @@ describe('TicTacToe', () => {
         expect(forked).toBe(true);
         expect(game.board).toEqual([
           X, _, O,
-          _, O, _,
-          O, _, X,
+          _, O, O,
+          _, _, X,
         ]);
       });
 
@@ -228,8 +244,8 @@ describe('TicTacToe', () => {
         const forked = game.forkTestAndSet(O, X);
         expect(forked).toBe(true);
         expect(game.board).toEqual([
-          X, _, O,
-          _, O, _,
+          X, _, _,
+          _, O, O,
           _, O, X,
         ]);
       });

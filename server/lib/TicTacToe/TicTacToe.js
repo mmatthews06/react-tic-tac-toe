@@ -67,38 +67,6 @@ class TicTacToe {
     this.winner = player;
   }
 
-  // makeMove(player, gridIndex) {
-  //   // playerChar = this.O if player == this.player1 else this.X
-  //   // otherPlayerChar = this.X if playerChar == this.O else this.O
-  //   let endState = null;
-  //   const playerChar = player === this.player1 ? O : X;
-  //   const otherPlayerChar = playerChar === this.O ? X : O;
-  //
-  //   this.playerTurn(playerChar, gridIndex);
-  //
-  //   if (this.checkWinner(playerChar)) {
-  //     this.winner = player;
-  //     this.ended = true;
-  //     // player.wins += 1;
-  //     endState = END_WIN;
-  //   }
-  //
-  //   if (this.nextTurn(otherPlayerChar)) {
-  //     this.winner = this.player2;
-  //     this.ended = true;
-  //     // player.losses += 1
-  //     endState = END_LOSS;
-  //   }
-  //
-  //   if (!this.ended && this.turn >= 9) {
-  //     this.ended = true;
-  //     // player.draws += 1;
-  //     endState = END_DRAW;
-  //   }
-  //
-  //   return endState;
-  // }
-
   nextTurn() {
     // Returns true if this the computer player won
     // with this turn's move.
@@ -234,7 +202,7 @@ class TicTacToe {
     // and then fill in one that doesn't leave a fork position open.
     return LINES.some((line) => {
       const lineSum = this.lineSum(line);
-      if (lineSum === otherPlayer) {
+      if (lineSum === player) {
         const emptyPositions = [];
         line.forEach((i) => {
           if (this.board[i] === EMPTY) {
@@ -290,7 +258,7 @@ class TicTacToe {
           forkableLines += 1;
         }
       });
-      if (forkableLines === 2) {
+      if (forkableLines >= 2) {
         forkPositions.push(index);
       }
     });
