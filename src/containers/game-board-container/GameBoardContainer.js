@@ -1,15 +1,19 @@
 /* global fetch */
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
 import GameBoard from '../../components/game-board/GameBoard';
 
-export default class GameBoardContainer extends React.Component {
+class GameBoardContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.newGame = this.newGame.bind(this);
     this.submitPlayerMove = this.submitPlayerMove.bind(this);
 
     // TODO: Handle loading state properly.
     this.state = {
+      isLoading: true,
       game: {
         board: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         ended: false,
@@ -22,18 +26,23 @@ export default class GameBoardContainer extends React.Component {
   }
 
   componentDidMount() {
-    // TODO: Handle errors properly
+    this.newGame();
+  }
+
+  newGame() {
+    this.setState({ isLoading: true });
     fetch('/tic-tac-toe/new')
       .then(resp => resp.json())
-      .then(game => this.setState({ game }))
+      .then(game => this.setState({ game, isLoading: false }))
       .catch(err => console.log('Error', err));
   }
 
   submitPlayerMove(position) {
-    const { game } = this.state;
-    if (game.ended) {
+    const { game, isLoading } = this.state;
+    if (game.ended || isLoading) {
       return;
     }
+    this.setState({ isLoading: true });
     game.board[position] = game.player1;
     fetch('/tic-tac-toe/move', {
       method: 'POST',
@@ -42,7 +51,7 @@ export default class GameBoardContainer extends React.Component {
         'Content-Type': 'application/json',
       },
     }).then(resp => resp.json())
-      .then(resp => this.setState({ game: resp }))
+      .then(resp => this.setState({ game: resp, isLoading: false }))
       .catch(err => console.log('Error', err));
   }
 
@@ -68,17 +77,32 @@ export default class GameBoardContainer extends React.Component {
 
     return (
       <React.Fragment>
-        { endMessage && (
-          <p>
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
+          justify="center"
+          spacing={16}
+        >
+          <Grid item>
+            <Button variant="contained" color="primary" onClick={this.newGame}>
+              New Game
+            </Button>
+          </Grid>
+          <span style={{ height: 20 }}>
             {endMessage}
-          </p>
-        )}
-        <GameBoard
-          board={board}
-          disabled={ended}
-          playerMoveHandler={this.submitPlayerMove}
-        />
+          </span>
+          <Grid item>
+            <GameBoard
+              board={board}
+              disabled={ended}
+              playerMoveHandler={this.submitPlayerMove}
+            />
+          </Grid>
+        </Grid>
       </React.Fragment>
     );
   }
 }
+
+export default GameBoardContainer;

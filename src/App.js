@@ -1,4 +1,5 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
 
 import GameBoardContainer from './containers/game-board-container/GameBoardContainer';
 
@@ -12,7 +13,11 @@ function App() {
           React Tic-Tac-Toe
         </h1>
       </header>
-      <GameBoardContainer />
+      <div style={{ padding: 30 }}>
+        <Grid container spacing={40}>
+          <GameBoardContainer />
+        </Grid>
+      </div>
     </div>
   );
 }
