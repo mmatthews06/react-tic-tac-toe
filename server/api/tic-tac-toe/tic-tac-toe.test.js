@@ -85,7 +85,7 @@ describe('Tic-Tac-Toe Express App', () => {
         board: [
           X, X, O,
           _, _, _,
-          O, _, _,
+          _, _, O,
         ],
         ended: false,
         winner: null,

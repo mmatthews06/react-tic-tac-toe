@@ -25,11 +25,11 @@ describe('GameBoardContainer', () => {
     const board = [0, 1, 4, 0, 1, 4, 0, 1, 4];
     const promise = givenBoard(board);
     const wrapper = mount(<GameBoardContainer />);
-    expect(wrapper.state('board')).toEqual([0, 0, 0, 0, 0, 0, 0, 0, 0]);
+    expect(wrapper.state('game').board).toEqual([0, 0, 0, 0, 0, 0, 0, 0, 0]);
     await promise;
     return promise.then(() => {
       wrapper.update();
-      expect(wrapper.state('board')).toEqual(board);
+      expect(wrapper.state('game').board).toEqual(board);
       done();
     });
   });

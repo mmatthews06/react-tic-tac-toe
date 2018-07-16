@@ -18,6 +18,7 @@ ShallowWrapper {
             0,
           ]
     }
+    disabled={false}
     height={500}
     playerMoveHandler={[Function]}
     width={500}
@@ -58,6 +59,7 @@ ShallowWrapper {
           width={500}
 />,
       ],
+      "className": "game-board ",
       "height": 500,
       "width": 500,
     },
@@ -132,6 +134,7 @@ ShallowWrapper {
             width={500}
 />,
         ],
+        "className": "game-board ",
         "height": 500,
         "width": 500,
       },

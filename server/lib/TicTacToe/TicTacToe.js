@@ -79,9 +79,6 @@ class TicTacToe {
       const i = Math.floor(Math.random() * 4);
       this.board[CORNERS[i]] = player;
       return false;
-    } if (this.turn >= 10) {
-      // TODO: This should probably throw an error...
-      return false;
     }
 
     // Try to win, check for two in a row
@@ -97,6 +94,17 @@ class TicTacToe {
       this.ended = true;
       this.winner = this.player2;
       return true;
+    }
+
+    // End the game, and otherwise make sure no more moves are made.
+    if (this.turn >= 9) {
+      const lastEmpty = this.board.indexOf(EMPTY);
+      if (lastEmpty > -1) {
+        this.board[lastEmpty] = player;
+      }
+      this.ended = true;
+      this.winner = null;
+      return false;
     }
 
     // Try to block the other player
