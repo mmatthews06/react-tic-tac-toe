@@ -1,7 +1,7 @@
 # React Tic-Tac-Toe
 This is a demo project, where a user can play Tic-Tac-Toe with a very clever Node.js server.
 
-This project uses React 16.x and Node.js 8.x (LTS) at present. There are plans to add more front-end renderers besides SVG (like a Three.js board), and one or two more back-end players that are more AI-like and probabilistic in its moves.
+This project uses React 16.x, Node.js 8.x (LTS), and Bablyon.js 3.2.0 at present. There are plans to add more front-end renderers besides SVG (e.g., the Bablyon board is in progress), and one or two more back-end players that are more AI-like, and probabilistic in their moves.
 
 ### Installation
 This set of steps currently only starts up the *dev* server, but it should suffice as a demo.
@@ -23,7 +23,7 @@ This set of steps currently only starts up the *dev* server, but it should suffi
   npm start
   ```
  6. If a browser does not open up immediately, navigate to [http://localhost:3000](http://localhost:3000) in a browser.
- 
+
 ### Tests
 To run the tests in watch mode:
 ```bash
@@ -34,6 +34,6 @@ To see a coverage report:
 npm test:coverage
 ```
 **NOTE**: If get an odd filesystem-related error running these tests, you may need to install `watchman` on your machine. E.g., `brew install watchman`
- 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

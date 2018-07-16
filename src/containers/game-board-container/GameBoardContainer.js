@@ -2,17 +2,25 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Radio from '@material-ui/core/Radio';
+import FormControl from '@material-ui/core/FormControl';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
 
+import BablyonBoard from '../../components/bablyon-board/BablyonBoard';
 import GameBoard from '../../components/game-board/GameBoard';
 
 class GameBoardContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.boardChange = this.boardChange.bind(this);
+    this.getBoardRenderer = this.getBoardRenderer.bind(this);
     this.newGame = this.newGame.bind(this);
     this.submitPlayerMove = this.submitPlayerMove.bind(this);
 
     // TODO: Handle loading state properly.
     this.state = {
+      boardRenderer: 'svgBoard',
       isLoading: true,
       game: {
         board: [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -27,6 +35,17 @@ class GameBoardContainer extends React.Component {
 
   componentDidMount() {
     this.newGame();
+  }
+
+  getBoardRenderer() {
+    const { boardRenderer } = this.state;
+    switch (boardRenderer) {
+      case 'bablyonBoard':
+        return BablyonBoard;
+      case 'svgBoard':
+      default:
+        return GameBoard;
+    }
   }
 
   newGame() {
@@ -70,10 +89,16 @@ class GameBoardContainer extends React.Component {
     return 'Draw. Try again.';
   }
 
+  boardChange(event) {
+    this.setState({ boardRenderer: event.target.value });
+  }
+
   render() {
-    const { game } = this.state;
+    const { boardRenderer, game } = this.state;
     const { board, ended } = game;
     const endMessage = this.gameEndMessage();
+
+    const Board = this.getBoardRenderer();
 
     return (
       <React.Fragment>
@@ -84,16 +109,32 @@ class GameBoardContainer extends React.Component {
           justify="center"
           spacing={16}
         >
-          <Grid item>
-            <Button variant="contained" color="primary" onClick={this.newGame}>
-              New Game
-            </Button>
+          <Grid container justify="center">
+            <Grid item style={{ padding: 5 }}>
+              <Button variant="contained" color="primary" onClick={this.newGame}>
+                New Game
+              </Button>
+            </Grid>
+            <Grid item style={{ padding: 5 }}>
+              <FormControl component="fieldset">
+                <RadioGroup
+                  name="boardRenderer"
+                  aria-label="Board Renderer"
+                  value={boardRenderer}
+                  onChange={this.boardChange}
+                  row
+                >
+                  <FormControlLabel value="svgBoard" control={<Radio />} label="SVG Board" />
+                  <FormControlLabel value="bablyonBoard" control={<Radio />} label="Bablyon Board" />
+                </RadioGroup>
+              </FormControl>
+            </Grid>
           </Grid>
           <span style={{ height: 20 }}>
             {endMessage}
           </span>
           <Grid item>
-            <GameBoard
+            <Board
               board={board}
               disabled={ended}
               playerMoveHandler={this.submitPlayerMove}
