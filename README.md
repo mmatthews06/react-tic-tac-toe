@@ -4,7 +4,7 @@ This is a demo project, where a user can play Tic-Tac-Toe with a very clever Nod
 This project uses React 16.x, Node.js 8.x (LTS), and Bablyon.js 3.2.0 at present. There are plans to add more front-end renderers besides SVG (e.g., the Bablyon board is in progress), and one or two more back-end players that are more AI-like, and probabilistic in their moves.
 
 ### Special Note
-This project is about a lot of things, but right now, the Tic-Tac-Toe algorithm isn't one of them. I have plans for basically every piece of this, but all in due time.
+This project is about a lot of things, but right now, the Tic-Tac-Toe algorithm isn't one of them. I have plans for basically every piece of this. All in due time.
 
 ### Installation
 This set of steps currently only starts up the *dev* server, but it should suffice as a demo.
