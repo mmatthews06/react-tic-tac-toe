@@ -3,8 +3,9 @@ This is a demo project, where a user can play Tic-Tac-Toe with a very clever Nod
 
 This project uses React 16.x, Node.js 8.x (LTS), and Bablyon.js 3.2.0 at present. There are plans to add more front-end renderers besides SVG (e.g., the Bablyon board is in progress), and one or two more back-end players that are more AI-like, and probabilistic in their moves.
 
-### Special Note
-This project is about a lot of things, but, right now, the Tic-Tac-Toe algorithm isn't one of them. I have plans for basically every piece of this. All in due time.
+### Special Notes
+* This project is about a lot of things, but, right now, the Tic-Tac-Toe algorithm isn't one of them. I have plans for basically every piece of this. All in due time.
+* Next steps include finishing the Babylon.js 3D board, moving the little bit of state to a Redux store, UI updates (and likely an [Ant Design](https://ant.design/) front-end, since I prefer it to Material UI), a reinforcement learning-trained Tic-Tac-Toe playing implementation, and more.
 
 ### Installation
 This set of steps currently only starts up the *dev* server, but it should suffice as a demo.
@@ -36,7 +37,7 @@ To see a coverage report:
 ```bash
 npm test:coverage
 ```
-**NOTE**: If get an odd filesystem-related error running these tests, you may need to install `watchman` on your machine. E.g., `brew install watchman`
+**NOTE**: If you get an odd filesystem-related error running these tests, you may need to install `watchman` on your machine. E.g., `brew install watchman`
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
