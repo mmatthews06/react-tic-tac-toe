@@ -5,7 +5,7 @@ This project uses React 16.x, Node.js 8.x (LTS), and Bablyon.js 3.2.0 at present
 
 ### Special Notes
 * This project is about a lot of things, but, right now, the Tic-Tac-Toe algorithm isn't one of them. I have plans for basically every piece of this. All in due time.
-* Next steps include finishing the Babylon.js 3D board, moving the little bit of state to a Redux store, UI updates (and likely an [Ant Design](https://ant.design/) front-end, since I prefer it to Material UI), a reinforcement learning-trained Tic-Tac-Toe playing implementation, and more.
+* Next steps include finishing the Babylon.js 3D board, moving the little bit of state to a Redux store, UI updates (and likely an [Ant Design](https://ant.design/) front-end, since I prefer it to Material UI), a reinforcement learning-trained Tic-Tac-Toe playing agent, and more.
 
 ### Installation
 This set of steps currently only starts up the *dev* server, but it should suffice as a demo.
